@@ -1,0 +1,348 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+}
+.dashboard {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    height: 100vh;
+}
+.sidebar {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+.main-content {
+    padding: 20px;
+    overflow-y: auto;
+}
+.user-profile {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #4a6278;
+}
+.user-profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid #3498db;
+}
+.menu-item {
+    padding: 15px 0;
+    list-style: none;
+    font-weight: 300px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.menu-item h3{
+    font-weight: 600;
+}
+.menu-item h3:hover{
+    color:  rgb(134, 141, 151);
+}
+.menu-icon{
+    display: none;
+}
+
+.menu-item:hover {
+    background-color: #34495e;
+    transform: translateX(5px);
+}
+.search{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 14px;
+    width: 30%;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+.search i{
+    margin-right: 14px;
+}
+.search input{
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+.widget {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.widget h2 {
+    margin-top: 0;
+    color: #2c3e50;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+}
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.stat-card {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+.stat-card i{
+    font-size: 25px;
+    width: 60px;
+    height: 60px;
+}
+.stat-card h3 {
+    margin: 0;
+    font-size: 2em;
+}
+.stat-card p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.kpi-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.kpi-card h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+.kpi-value {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.kpi-change {
+    font-size: 0.9em;
+}
+.positive-change {
+    color: #2ecc71;
+}
+.negative-change {
+    color: #e74c3c;
+}
+.chart-container {
+    position: relative;
+    height: 300px;
+}
+#taskList {
+    list-style-type: none;
+    padding: 0;
+}
+#taskList li {
+    background-color: #ecf0f1;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#taskList li button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.content{
+    width: 94%;
+    margin: 30px 0px 30px 30px;
+    overflow: auto;
+    background: #fff;
+    border-radius: 8px;
+}
+.content img{
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.content h5{
+    font-weight: 600;
+    font-size: 14px;
+}
+.content p{
+    font-weight: 400;
+    font-size: 13px;
+}
+.content .people{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: start;
+}
+table{
+    border-collapse: collapse;
+}
+tr{
+    border-color: 1px solid #eef0f3ce;
+}
+thead td{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    background: #eef0f3b4;
+    text-align: start;
+    padding: 15px;
+}
+tbody tr td{
+    padding: 10px 15px;
+}
+.active p{
+   background: #d7fada;
+   padding: 2px 10px;
+   display: inline-block;
+   border-radius: 40px;
+   color: #000; 
+}
+.edit a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #594ef7;
+}
+#newTaskInput {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+}
+
+/* RESPONSIVENESS */
+/* Sidebar Responsiveness */
+@media only screen and (max-width: 768px) {
+    body{
+        max-width: 100%;
+        padding-right: 0;
+    }
+    .sidebar {
+      display: none; /* Hide sidebar on small screens */
+    }
+    .sidebar.active{
+        left: 0px;
+    }
+    #menu-icon{
+        display: initial;
+    }
+    .widget h2{
+        font-size: 14px;
+
+    }
+    .widget p{
+        font-size: 11px;
+    }
+    .widget .search{
+        width: 150px;
+        height: 10px;
+    }
+    .widget ::placeholder{
+        font-size: 10px;
+        
+    }
+    .menu-icon {
+      display: block; /* Show menu icon */
+    }
+    .stats-grid .stat-card{
+        width: 80%;
+    }
+    .stat-card h3{
+        font-size: 13px;
+    }
+    .stat-card p{
+        font-size: 11px;
+    }
+    .widget{
+        width: 80%;
+    }
+    .widget h2{
+        font-size: 13px;
+    }
+    .widget .kpi-card{
+        width: 55%;
+    }
+    .kpi-card h3{
+        font-size: 11px;
+
+    }
+    .kpi-value{
+        font-size: 12px;
+
+    }
+    .kpi-change .positive-change{
+        font-size: 7px;
+    }
+    .kpi-change .negative-change{
+        font-size: 7px;
+    }
+    .content{
+        margin-left: 2px;
+    }
+    tr td{
+        font-size: 10px;
+    }
+    
+    .people-de h5{
+        font-size: 10px;
+    }
+    .people-de p{
+        font-size: 9px;
+    }
+    .people-des h5{
+        font-size: 10px;
+    }
+    .people-des p{
+        font-size: 9px;
+    }
+    .active p{
+        font-size: 10px;
+    }
+    .role p{
+        font-size: 10px;
+    }
+    .edit a{
+        font-size: 10px;
+    }
+    addTask{
+        font-size: 10px;
+    }
+
+
+
+  }
+  
+  /* Font Size Adjustments */
+ 
+  
+  /* Image Responsiveness */
+  img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+  }
