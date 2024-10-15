@@ -236,113 +236,48 @@ tbody tr td{
     border-radius: 5px;
 }
 
-/* RESPONSIVENESS */
-/* Sidebar Responsiveness */
-@media only screen and (max-width: 768px) {
-    body{
-        max-width: 100%;
-        padding-right: 0;
-    }
-    .sidebar {
-      display: none; /* Hide sidebar on small screens */
-    }
-    .sidebar.active{
-        left: 0px;
-    }
-    #menu-icon{
-        display: initial;
-    }
-    .widget h2{
-        font-size: 14px;
 
-    }
-    .widget p{
-        font-size: 11px;
-    }
-    .widget .search{
-        width: 150px;
-        height: 10px;
-    }
-    .widget ::placeholder{
-        font-size: 10px;
-        
-    }
-    .menu-icon {
-      display: block; /* Show menu icon */
-    }
-    .stats-grid .stat-card{
-        width: 80%;
-    }
-    .stat-card h3{
-        font-size: 13px;
-    }
-    .stat-card p{
-        font-size: 11px;
-    }
-    .widget{
-        width: 80%;
-    }
-    .widget h2{
-        font-size: 13px;
-    }
-    .widget .kpi-card{
-        width: 55%;
-    }
-    .kpi-card h3{
-        font-size: 11px;
-
-    }
-    .kpi-value{
-        font-size: 12px;
-
-    }
-    .kpi-change .positive-change{
-        font-size: 7px;
-    }
-    .kpi-change .negative-change{
-        font-size: 7px;
-    }
-    .content{
-        margin-left: 2px;
-    }
-    tr td{
-        font-size: 10px;
-    }
+@media (max-width: 767px) {
+    body {
+        margin: 0;
+        padding: 0;
+      }
+      
+      .dashboard {
+        width: 100%;
+        max-width: 1200px; /* Adjust max-width as needed */
+        margin: 0 auto;
+      }
     
-    .people-de h5{
-        font-size: 10px;
+    .sidebar{
+        display: none;
     }
-    .people-de p{
-        font-size: 9px;
+    .search{
+        width: 90%;
     }
-    .people-des h5{
-        font-size: 10px;
+    .widget {
+        width: 100%;
+        padding: 15px;
     }
-    .people-des p{
-        font-size: 9px;
-    }
-    .active p{
-        font-size: 10px;
-    }
-    .role p{
-        font-size: 10px;
-    }
-    .edit a{
-        font-size: 10px;
-    }
-    addTask{
-        font-size: 10px;
+    .stat-card{
+        width: 95%;
     }
 
+    .stat-card h3 {
+        font-size: 1.5em;
+    }
+    .kpi-grid{
+        width: 100%;
+    }
+    .kpi-card{
+        width: 60%;
+    }
 
-
-  }
-  
-  /* Font Size Adjustments */
- 
-  
-  /* Image Responsiveness */
-  img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-  }
+    .kpi-value {
+        font-size: 1.5em;
+    }
+    .content {
+        width: 100%;
+        margin: 30px 0;
+    }
+}
