@@ -238,44 +238,35 @@ tbody tr td{
 
 
 @media (max-width: 767px) {
-    body {
-        margin: 0;
-        padding: 0;
-      }
-      
-      .dashboard {
-        width: 100%;
-        max-width: 1200px; /* Adjust max-width as needed */
-        margin: 0 auto;
-      }
-    
-    .sidebar{
+    .sidebar {
         display: none;
     }
-    .search{
+    .dashboard {
+        flex-direction: column;
+        height: auto;
+    }
+    .search {
         width: 90%;
     }
+
     .widget {
         width: 100%;
         padding: 15px;
     }
-    .stat-card{
-        width: 95%;
+
+    .stat-card {
+        width: 100%;
+        margin: 0 auto;
     }
 
-    .stat-card h3 {
-        font-size: 1.5em;
+    .kpi-grid, .stats-grid {
+        grid-template-columns: 1fr;
     }
-    .kpi-grid{
+
+    .kpi-card {
         width: 100%;
     }
-    .kpi-card{
-        width: 60%;
-    }
 
-    .kpi-value {
-        font-size: 1.5em;
-    }
     .content {
         width: 100%;
         margin: 30px 0;
