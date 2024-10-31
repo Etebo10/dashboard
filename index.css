@@ -242,6 +242,7 @@ tbody tr td{
         display: none;
     }
     .dashboard {
+        grid-template-columns: max-width 1fr
         flex-direction: column;
         height: auto;
     }
