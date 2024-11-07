@@ -242,9 +242,7 @@ tbody tr td{
         display: none;
     }
     .dashboard {
-        grid-template-columns: 767px 1fr
-        flex-direction: column;
-        height: auto;
+       display: flex;
     }
     .search {
         width: 90%;
